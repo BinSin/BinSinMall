@@ -10,8 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.binsin.helloDI.di.CustomerService;
+
 import model.Customer;
-import service.CustomerService;
 
 /**
  * Servlet implementation class DoLogin

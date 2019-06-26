@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="id_dog"
+		class="com.binsin.helloDI.Dog">
+		<property name="myName" value="Reo"></property>
+	</bean>
+	
+	<bean id="id_cat"
+		class="com.binsin.helloDI.Cat">
+		<property name="myName" value="Dubu"></property>
+	</bean>
+	
+	<bean id="id_petowner"
+		class="com.binsin.helloDI.PetOwner">
+		<constructor-arg ref="id_dog"></constructor-arg>
+	</bean>
+
+</beans>
