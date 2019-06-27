@@ -25,16 +25,19 @@
 	<bean id="id_logger" class="com.binsin.helloAOP.Logger">
 	</bean>
 
+	<!-- 
 	<aop:config>
 		<aop:aspect ref="id_logger" id="myAspect">
-			<!-- pointcut : target -->
-			<!-- joinPoint : void com.binsin.helloAOP.*.sound() -->
+			pointcut : target
+			joinPoint : void com.binsin.helloAOP.*.sound()
 			<aop:pointcut expression="execution( void com.binsin.helloAOP.*.sound() )" id="selectSound" />
-			<!-- 타켓에 대한 advice -->
+			타켓에 대한 advice
 			<aop:before method="beforeToSound" pointcut-ref="selectSound" />
 			<aop:after method="afterToSound" pointcut-ref="selectSound" />
 			<aop:around method="aroundToSound"
 				pointcut-ref="selectSound" />
 		</aop:aspect>
-	</aop:config>
+	</aop:config> 
+	-->
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 </beans>

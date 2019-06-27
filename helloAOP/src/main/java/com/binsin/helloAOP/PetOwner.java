@@ -7,7 +7,7 @@ public class PetOwner {
 	
 	// 타입에 따른 bean이 자동으로 주입된다.
 	@Autowired
-	@Qualifier(value="qf_dog")
+	@Qualifier(value="qf_cat")
 	private AnimalType animal;
 	
 	public void play() {
