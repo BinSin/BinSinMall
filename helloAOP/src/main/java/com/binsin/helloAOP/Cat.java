@@ -1,4 +1,4 @@
-package com.binsin.helloDI;
+package com.binsin.helloAOP;
 
 import lombok.Setter;
 
@@ -10,7 +10,6 @@ public class Cat implements AnimalType {
 	@Override
 	public void sound() {
 		System.out.println("Cat name = " + myName + ":" + "Moow");
-
 	}
 
 }

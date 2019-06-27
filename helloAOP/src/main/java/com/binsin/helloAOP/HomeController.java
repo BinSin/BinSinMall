@@ -1,4 +1,4 @@
-package com.binsin.helloDI;
+package com.binsin.helloAOP;
 
 import java.text.DateFormat;
 import java.util.Date;
