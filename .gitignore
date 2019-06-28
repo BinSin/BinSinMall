@@ -39,3 +39,5 @@ test-output
 atlassian-ide-plugin.xml
 .gradletasknamecache
 /.metadata/
+
+jdbc.properties
