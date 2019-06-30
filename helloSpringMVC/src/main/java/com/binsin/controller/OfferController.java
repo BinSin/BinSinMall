@@ -24,4 +24,11 @@ public class OfferController {
 		return "offers";
 	}
 	
+	@RequestMapping("/createoffer")
+	public String createOffer(Model model) {
+		model.addAttribute("offer", new Offer());
+		
+		return "createoffer";
+	}
+	
 }
