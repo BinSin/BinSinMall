@@ -18,4 +18,8 @@ public class OfferService {
 		return offerDao.getOffers();
 	}
 
+	public void insert(Offer offer) {
+		offerDao.insert(offer);
+	}
+
 }
