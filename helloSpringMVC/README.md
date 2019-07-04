@@ -15,3 +15,6 @@ spring form 사용으로 썼던 내용 유지시킬 수 있다.
 # Spring Security
 
 ## Filter
+
+## Spring Security 5
+spring security 5 버전 에서는 패스워드 값에 passwordEncoding 인 id 값을 붙여야 한다. 사용하지 않을 때는 {noop} 사용한다.
