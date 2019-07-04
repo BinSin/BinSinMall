@@ -29,11 +29,16 @@
 	<security:http auto-config="true" use-expressions="true">
 		<!-- root, offers는 모든 접근 허용 -->
 		<security:intercept-url pattern="/" access="permitAll" />
+		<security:intercept-url pattern="/login" access="permitAll" />
+		<security:intercept-url pattern="/logout" access="permitAll" />
 		<security:intercept-url pattern="/offers" access="permitAll" />
 		<!-- createoffer는 권한이 있는 사용자만 접근 허용 -->
 		<security:intercept-url pattern="/createoffer" access="isAuthenticated()" />
+		<security:intercept-url pattern="docreate" access="isAuthenticated()" />
 		<security:intercept-url pattern="/resources/**" access="permitAll" />
 		<security:intercept-url pattern="/**" access="denyAll" />
+		<security:form-login login-page="/login" />
+		<security:logout />
 	</security:http>
-	
+
 </beans>
