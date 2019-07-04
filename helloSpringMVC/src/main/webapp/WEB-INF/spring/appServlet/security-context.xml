@@ -5,7 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!-- security 5 부터는 패스워드에 id 값을 사용해야 하는데 사용하지 싫으면 noop 붙여준다. -->
+	<!-- security 5 부터는 패스워드에 passwordEncoding 값을 넣어야 한다. / 싫으면 {noop} 을 넣는다. -->
 	<security:authentication-manager>
 		<security:authentication-provider>
 			<security:user-service>
