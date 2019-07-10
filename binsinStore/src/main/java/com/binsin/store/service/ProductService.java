@@ -18,4 +18,8 @@ public class ProductService {
 		return productDao.getProducts();
 	}
 
+	public boolean addProduct(Product product) {
+		return productDao.addProduct(product);		
+	}
+
 }

@@ -45,4 +45,18 @@ public class ProductDao {
 		});
 	}
 
+	public Boolean addProduct(Product product) {
+
+		String name = product.getName();
+		String category = product.getCategory();
+		int price = product.getPrice();
+		String manufacturer = product.getManufacturer();
+		int unitInStock = product.getUnitInStock();
+		String description = product.getDescription();
+		
+		String sqlStatement = "insert into product (name, category, price, manufacturer, unitInStock, description) values (?, ?, ?, ?, ?, ?)";
+		
+		return (jdbcTemplate.update(sqlStatement, new Object[] {name,category,price,manufacturer,unitInStock,description}) == 1);
+	}
+
 }
