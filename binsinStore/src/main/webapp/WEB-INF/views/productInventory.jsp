@@ -16,6 +16,7 @@
 					<th>Manufacturer</th>
 					<th>Unit In Stock</th>
 					<th>Description</th>
+					<th>Edit</th>
 					<th>Remove</th>
 				</tr>
 			</thead>
@@ -29,6 +30,7 @@
 						<td>${product.manufacturer}</td>
 						<td>${product.unitInStock}</td>
 						<td>${product.description}</td>
+						<td style="text-align:center"><a href="<c:url value="/admin/productInventory/updateProduct/${product.id}"/>"><i class="fas fa-edit"></i></a></td>
 						<td style="text-align:center"><a href="<c:url value="/admin/productInventory/deleteProduct/${product.id}"/>"><i class="fas fa-times"></i></a></td>
 					</tr>
 				</c:forEach>
