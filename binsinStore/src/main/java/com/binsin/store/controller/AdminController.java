@@ -51,6 +51,7 @@ public class AdminController {
 	
 	// hibernate 를 사용하여 데이터가 유효한지 Validate 해야 한다.
 	// 객체를 바인딩 하고 Product를 검증하고 결과를 result에 넣는다.
+	// Controller에 의해서 Product와 BindingResult 값을 View 에 전달한다.
 	@RequestMapping(value="/productInventory/addProduct", method=RequestMethod.POST)
 	public String addProductPost(@Valid Product product, BindingResult result) {
 	
