@@ -19,15 +19,49 @@ public class testMain {
 		
 		sessionFactory = new Configuration().configure().buildSessionFactory();
 		
-		Product product = new Product();
-		product.setName("notebook");
-		product.setPrice(2000);
-		product.setDescription("Awesome notebook!!");
+		Category category1 = new Category();
+		category1.setName("Computer");
+		
+		Category category2 = new Category();
+		category2.setName("Car");
+		
+		Product product1 = new Product();
+		product1.setName("Notebook");
+		product1.setPrice(2000);
+		product1.setDescription("Awesome notebook!!");
+		product1.setCategory(category1);
+		// 양방향
+		category1.getProducts().add(product1);
+		
+		Product product2 = new Product();
+		product2.setName("Desktop");
+		product2.setPrice(1000);
+		product2.setDescription("Powerful notebook!!");
+		product2.setCategory(category1);
+		category1.getProducts().add(product2);
+		
+		Product product3 = new Product();
+		product3.setName("Sonata");
+		product3.setPrice(1200000);
+		product3.setDescription("Good car!!");
+		product3.setCategory(category2);
+		category2.getProducts().add(product3);
 		
 		Session session = sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
 	
-		session.save(product);
+		// 저장은 부모쪽 저장
+		/*
+		session.save(product1);
+		session.save(product2);
+		session.save(product3);
+		*/
+
+		session.save(category1);
+		session.save(category2);
+		
+		// session.delete(product1); // product1 -> category1 -> product2
+		// session.delete(category1);
 		
 		tx.commit();
 		session.close();

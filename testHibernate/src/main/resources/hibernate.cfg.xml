@@ -18,5 +18,7 @@
 		<property name="hibernate.id.new_generator_mappings">true</property> <!-- Hibernate 5.2 이상부터 default가 true -->
 		
 		<mapping class="testHibernate.Product" /> <!-- 여기에 매핑 정보를 입력 -->
+		<mapping class="testHibernate.Category" />
+		
 	</session-factory>
 </hibernate-configuration>
