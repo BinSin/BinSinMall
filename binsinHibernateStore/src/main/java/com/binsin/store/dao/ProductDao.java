@@ -27,7 +27,7 @@ public class ProductDao {
 	
 	public List<Product> getProducts() {
 		Session session = sessionFactory.getCurrentSession();
-		Query query = session.createQuery("from product");
+		Query query = session.createQuery("from Product");
 		List<Product> productList = query.list();
 		
 		return productList;
