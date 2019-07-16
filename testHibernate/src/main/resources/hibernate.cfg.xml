@@ -19,6 +19,8 @@
 		
 		<mapping class="testHibernate.Product" /> <!-- 여기에 매핑 정보를 입력 -->
 		<mapping class="testHibernate.Category" />
+		<mapping class="testHibernate.License" />
+		<mapping class="testHibernate.Person" />
 		
 	</session-factory>
 </hibernate-configuration>
