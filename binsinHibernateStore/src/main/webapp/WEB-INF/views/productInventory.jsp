@@ -8,7 +8,7 @@
 		<table class="table table-striped">
 			<thead>
 				<tr class="bg-success">
-					<th>ID</th>
+					<th>Photo Thumb</th>
 					<th>Name</th>
 					<th>Category</th>
 					<th>Price</th>
@@ -22,15 +22,15 @@
 			<tbody>
 				<c:forEach var="product" items="${products}">
 					<tr>
-						<td>${product.id}</td>
+						<td><img src="<c:url value="/resources/images/${product.imageFilename}" />" alt="image" style="width:100%" /></td>
 						<td>${product.name}</td>
 						<td>${product.category}</td>
 						<td>${product.price}</td>
 						<td>${product.manufacturer}</td>
 						<td>${product.unitInStock}</td>
 						<td>${product.description}</td>
-						<td style="text-align:center"><a href="<c:url value="/admin/productInventory/updateProduct/${product.id}"/>"><i class="fas fa-edit"></i></a></td>
-						<td style="text-align:center"><a href="<c:url value="/admin/productInventory/deleteProduct/${product.id}"/>"><i class="fas fa-times"></i></a></td>
+						<td><a href="<c:url value="/admin/productInventory/updateProduct/${product.id}"/>"><i class="fas fa-edit"></i></a></td>
+						<td><a href="<c:url value="/admin/productInventory/deleteProduct/${product.id}"/>"><i class="fas fa-times"></i></a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

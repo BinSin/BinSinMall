@@ -8,8 +8,8 @@
 		<p class="lead">Fill the below information to add a product:</p>
 
 		<sf:form
-			action="${pageContext.request.contextPath}/admin/productInventory/updateProduct"
-			method="post" modelAttribute="product">
+			action="${pageContext.request.contextPath}/admin/productInventory/updateProduct?${_csrf.parameterName}=${_csrf.token}"
+			method="post" modelAttribute="product" enctype="multipart/form-data">
 			
 			<!-- id 값도 보내줘야 하므로 넣어줘야 한다 -->
 			<sf:hidden path="id"/>
@@ -50,7 +50,14 @@
 				<sf:textarea path="description" id="description" class="form-control" />
 			</div>
 			
+			<div class="form-group">
+				<label for="productImage">Upload Picture</label>
+				<sf:input path="productImage" id="productImage" type="file" class="form-control" />
+			</div>
+			
 			<button type="submit" class="btn btn-primary">Submit</button>
+			
+			<a href="<c:url value="/admin/productInventory" />" class="btn btn-default">Cancel</a>
 			
 		</sf:form>
 	</div>

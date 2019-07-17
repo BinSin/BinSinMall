@@ -8,8 +8,8 @@
 		<p class="lead">Fill the below information to add a product:</p>
 
 		<sf:form
-			action="${pageContext.request.contextPath}/admin/productInventory/addProduct"
-			method="post" modelAttribute="product">
+			action="${pageContext.request.contextPath}/admin/productInventory/addProduct?${_csrf.parameterName}=${_csrf.token}"
+			method="post" modelAttribute="product" enctype="multipart/form-data">
 
 			<div class="form-group">
 				<label for="name">Name</label>
@@ -47,7 +47,14 @@
 				<sf:textarea path="description" id="description" class="form-control" />
 			</div>
 			
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<div class="form-group">
+				<label for="productImage">Upload Picture</label>
+				<sf:input path="productImage" id="productImage" type="file" class="form-control" />
+			</div>
+			
+			<button type="submit" class="btn btn-primary">Submit</button> 
+			
+			<a href="<c:url value="/admin/productInventory" />" class="btn btn-default">Cancel</a>
 			
 		</sf:form>
 	</div>
