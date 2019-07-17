@@ -8,7 +8,6 @@
 		<table class="table table-striped">
 			<thead>
 				<tr class="bg-success">
-					<th>ID</th>
 					<th>Name</th>
 					<th>Category</th>
 					<th>Price</th>
@@ -20,7 +19,6 @@
 			<tbody>
 				<c:forEach var="product" items="${products}">
 					<tr>
-						<td>${product.id}</td>
 						<td>${product.name}</td>
 						<td>${product.category}</td>
 						<td>${product.price}</td>
