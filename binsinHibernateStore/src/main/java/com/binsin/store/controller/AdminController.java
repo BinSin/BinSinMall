@@ -84,7 +84,12 @@ public class AdminController {
 			System.out.print("---------- file end ----------\n");
 		}
 		
-		if(productImage != null && !productImage.isEmpty())
+		File destdir = new File(rootDirectory + "\\resources\\images\\"); //디렉토리 가져오기
+		if(!destdir.exists()){
+            destdir.mkdirs(); //디렉토리가 존재하지 않는다면 생성
+        }
+		
+		if(productImage != null && !productImage.isEmpty()) {
 			try {
 				productImage.transferTo(new File(savePath.toString()));
 			} catch (IllegalStateException e) {
@@ -94,6 +99,7 @@ public class AdminController {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		}
 		
 		product.setImageFilename(productImage.getOriginalFilename());
 		
@@ -139,7 +145,12 @@ public class AdminController {
 		String rootDirectory = request.getSession().getServletContext().getRealPath("/");
 		Path savePath = Paths.get(rootDirectory + "\\resources\\images\\" + productImage.getOriginalFilename());
 		
-		if(productImage != null && !productImage.isEmpty())
+		File destdir = new File(rootDirectory + "\\resources\\images\\"); //디렉토리 가져오기
+		if(!destdir.exists()){
+            destdir.mkdirs(); //디렉토리가 존재하지 않는다면 생성
+        }
+		
+		if(productImage != null && !productImage.isEmpty()) {
 			try {
 				productImage.transferTo(new File(savePath.toString()));
 			} catch (IllegalStateException e) {
@@ -149,6 +160,7 @@ public class AdminController {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		}
 		
 		product.setImageFilename(productImage.getOriginalFilename());
 		
