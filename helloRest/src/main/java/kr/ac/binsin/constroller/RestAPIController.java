@@ -3,12 +3,15 @@ package kr.ac.binsin.constroller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import kr.ac.binsin.model.User;
 import kr.ac.binsin.service.UserService;
@@ -44,5 +47,22 @@ public class RestAPIController {
 		
 		return new ResponseEntity<User>(user, HttpStatus.OK);
 	}
+	
+	@RequestMapping(value="/users", method=RequestMethod.POST) // json파일의 request body 부분에 정보가 담긴다. 
+	public ResponseEntity<Void> createUser(@RequestBody User user,
+											UriComponentsBuilder ucBuilder) { // 새롭게 생성되는 사용자의 URI를 헤더 정보에 담는다.
 		
+		if(userService.isUserExist(user)) {
+			// to do list : exception
+		}
+		
+		userService.saveUser(user);
+		
+		HttpHeaders headers = new HttpHeaders();
+		headers.setLocation(ucBuilder.path("api/users/{id}").buildAndExpand(user.getId()).toUri());
+		
+		return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
+	}
+	
+	
 }
