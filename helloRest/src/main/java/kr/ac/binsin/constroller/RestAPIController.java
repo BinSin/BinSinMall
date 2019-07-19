@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import kr.ac.binsin.exception.UserDuplicatedException;
+import kr.ac.binsin.exception.UserNotFoundException;
 import kr.ac.binsin.model.User;
 import kr.ac.binsin.service.UserService;
 
@@ -42,7 +45,7 @@ public class RestAPIController {
 		User user = userService.findById(id);
 		
 		if(user == null) {
-			// to do list : exception
+			throw new UserNotFoundException(id);
 		}
 		
 		return new ResponseEntity<User>(user, HttpStatus.OK);
@@ -54,7 +57,7 @@ public class RestAPIController {
 											UriComponentsBuilder ucBuilder) { // 새롭게 생성되는 사용자의 URI를 헤더 정보에 담는다.
 		
 		if(userService.isUserExist(user)) {
-			// to do list : exception
+			throw new UserDuplicatedException(user.getName());
 		}
 		
 		userService.saveUser(user);
@@ -73,7 +76,7 @@ public class RestAPIController {
 		User currentUser = userService.findById(id);
 		
 		if(currentUser == null) {
-			// to do list : exception
+			throw new UserNotFoundException(id);
 		}
 		
 		currentUser.setName(user.getName());
@@ -91,7 +94,7 @@ public class RestAPIController {
 		
 		User user = userService.findById(id);
 		if(user == null) {
-			// to do list : exception
+			throw new UserNotFoundException(id);
 		}
 		
 		userService.deleteUserById(id);
@@ -106,6 +109,11 @@ public class RestAPIController {
 		userService.deleteAlllUsers();
 		
 		return new ResponseEntity<User>(HttpStatus.NO_CONTENT);
+	}
+	
+	@ExceptionHandler(UserNotFoundException.class)
+	public ResponseEntity<ErrorResponse> handleUserNotFoundException(HttpServletRequest req, UserNotFoundException ex) {
+		
 	}
 	
 }
