@@ -84,4 +84,28 @@ public class RestAPIController {
 		
 		return new ResponseEntity<User>(currentUser, HttpStatus.OK);
 	}
+	
+	// Delete a User
+	@RequestMapping(value="/users/{id}", method=RequestMethod.DELETE)
+	public ResponseEntity<User> deleteUser(@PathVariable("id") long id) {
+		
+		User user = userService.findById(id);
+		if(user == null) {
+			// to do list : exception
+		}
+		
+		userService.deleteUserById(id);
+		
+		return new ResponseEntity<User>(HttpStatus.NO_CONTENT);
+	}
+	
+	// Delete All Users
+	@RequestMapping(value="/users", method=RequestMethod.DELETE)
+	public ResponseEntity<User> deleteAllUsers() {
+		
+		userService.deleteAlllUsers();
+		
+		return new ResponseEntity<User>(HttpStatus.NO_CONTENT);
+	}
+	
 }
