@@ -34,15 +34,15 @@ public class RestAPIController {
 	}
 	
 	// Retrieve Single User
-		@RequestMapping(value="/users/{id}", method=RequestMethod.GET)
-		public ResponseEntity<User> getUser(@PathVariable("id") long id) {
-			User user = userService.findById(id);
-			
-			if(user == null) {
-				// to do list : exception
-			}
-			
-			return new ResponseEntity<User>(user, HttpStatus.OK);
+	@RequestMapping(value="/users/{id}", method=RequestMethod.GET)
+	public ResponseEntity<User> getUser(@PathVariable("id") long id) {
+		User user = userService.findById(id);
+		
+		if(user == null) {
+			// to do list : exception
 		}
+		
+		return new ResponseEntity<User>(user, HttpStatus.OK);
+	}
 		
 }
