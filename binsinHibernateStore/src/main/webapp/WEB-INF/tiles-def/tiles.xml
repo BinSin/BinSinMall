@@ -57,4 +57,9 @@
     <put-attribute name="body" value="/WEB-INF/views/registerUserSuccess.jsp" />
   </definition>
   
+  <definition name="viewProduct" extends="base">
+  	<put-attribute name="title" value="Deatil View Page" />
+    <put-attribute name="body" value="/WEB-INF/views/viewProduct.jsp" />
+  </definition>
+  
 </tiles-definitions>
