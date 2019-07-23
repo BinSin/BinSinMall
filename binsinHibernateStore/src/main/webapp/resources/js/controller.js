@@ -4,7 +4,7 @@ cartApp.controller("cartCtrl", function($scope, $http) {
 	
 	$scope.initCartId = function(cartId) {
 		$scope.cartId = cartId;
-		$scope.refreshart();
+		$scope.refreshCart();
 		
 	};
 	
@@ -47,7 +47,7 @@ cartApp.controller("cartCtrl", function($scope, $http) {
 		});
 	};
 	
-	$scope.calGrndTotal = function() {
+	$scope.calGrandTotal = function() {
 		var grandTotal = 0;
 		
 		for(var i=0; i<$scope.cart.cartItems.length; i++) {

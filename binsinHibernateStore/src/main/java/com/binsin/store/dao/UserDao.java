@@ -42,8 +42,8 @@ public class UserDao {
 	@SuppressWarnings("unchecked")
 	public User getUserByUsername(String username) {
 		Session session = sessionFactory.getCurrentSession();
-		TypedQuery<User> query = session.createQuery("from User where username = ?");
-		query.setParameter(0,  username);
+		TypedQuery<User> query = session.createQuery("from User where username = ?0");
+		query.setParameter(0, username);
 		
 		return query.getSingleResult();
 	}

@@ -43,9 +43,9 @@ public class CartItemDao {
 	@SuppressWarnings("unchecked")
 	public CartItem getCartItemByProductId(int cartId, int productId) {
 		Session session = sessionFactory.getCurrentSession();
-		TypedQuery<CartItem> query = session.createQuery("from CartItem where cart.id=? and product.id=?");
+		TypedQuery<CartItem> query = session.createQuery("from CartItem where cart.id=?0 and product.id=?1");
 		query.setParameter(0, cartId);
-		query.setParameter(1,  productId);
+		query.setParameter(1, productId);
 		
 		return (CartItem)query.getSingleResult();
 	}
