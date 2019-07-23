@@ -11,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.binsin.store.model.Cart;
 import com.binsin.store.model.ShippingAddress;
 import com.binsin.store.model.User;
 import com.binsin.store.service.UserService;
@@ -56,6 +57,9 @@ public class RegisterController {
 			user.setAuthority("ROLE_ADMIN");
 		else
 			user.setAuthority("ROLE_USER");
+		
+		Cart cart = new Cart(); // Cart는 optional=true 이므로 null이 들어가면 안되므로 객체를 생성해서 넣어줘야 한다.
+		user.setCart(cart);
 		
 		userService.addUser(user);
 		

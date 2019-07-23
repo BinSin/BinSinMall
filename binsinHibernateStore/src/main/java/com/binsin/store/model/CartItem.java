@@ -36,7 +36,7 @@ public class CartItem implements Serializable {
 	@JoinColumn(name="productId")
 	private Product product;
 	
-	private int guantity;
+	private int quantity;
 	
 	private double totalPrice;
 	
