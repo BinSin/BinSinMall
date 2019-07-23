@@ -90,7 +90,7 @@ public class CartRestController {
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
-	@RequestMapping(value="/cartitem/{productid}", method=RequestMethod.DELETE)
+	@RequestMapping(value="/cartitem/{productId}", method=RequestMethod.DELETE)
 	public ResponseEntity<Void> removeItem(@PathVariable(value="productId") int productId) {
 		
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

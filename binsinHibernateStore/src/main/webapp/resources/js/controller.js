@@ -49,7 +49,7 @@ cartApp.controller("cartCtrl", function($scope, $http) {
 		$http({
 			method : 'DELETE',
 			url : '/binsinStore/api/cart/cartitem/' + productId
-		}).then(function sucessCallback() {
+		}).then(function successCallback() {
 			$scope.refreshCart();
 		}, function errorCallback(response) {
 			console.log(response.data);
