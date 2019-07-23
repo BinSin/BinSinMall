@@ -17,7 +17,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 // Serialization : Object -> Byte Stream 으로 변환
-// De-Serialization : Byte Strea -> Object 로 변환
+// De-Serialization : Byte Stream -> Object 로 변환
 // 네트워크를 통해 객체를 전달하려면 이러한 변환 과정이 필요하다.
 // Object -> Byte Stream -> File, DB, Memory -> Byte Stream -> Object
 // 여기서는 Object -> JSON(Byte Stream) 형식으로 변환한다.
