@@ -40,6 +40,10 @@ public class User {
 	@JoinColumn(unique=true) // unique : 유일한 값이 들어가야 한다.
 	private ShippingAddress shippingAddress;
 	
+	@OneToOne(optional=false, cascade=CascadeType.ALL) // optional이 false면 null 허용 / default : true
+	@JoinColumn(unique=true)
+	private Cart cart;
+	
 	private boolean enabled=false;
 	
 	private String authority;
