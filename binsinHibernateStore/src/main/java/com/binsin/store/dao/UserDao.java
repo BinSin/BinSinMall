@@ -3,18 +3,18 @@ package com.binsin.store.dao;
 import java.util.List;
 
 import javax.persistence.TypedQuery;
-import javax.transaction.Transactional;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.binsin.store.model.User;
 
 @Repository
-@Transactional 
+@Transactional
 public class UserDao {
 
 	
