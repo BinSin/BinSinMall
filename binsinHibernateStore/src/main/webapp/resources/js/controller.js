@@ -17,6 +17,9 @@ cartApp.controller("cartCtrl", function($scope, $http) {
 	}
 	
 	$scope.clearCart = function() {
+		
+		$scope.setCsrfToken();
+		
 		$http({
 			method: 'DELETE',
 			url : '/binsinStore/api/cart/' + $scope.cartId
@@ -28,6 +31,9 @@ cartApp.controller("cartCtrl", function($scope, $http) {
 	};
 	
 	$scope.addToCart = function(productId) {
+		
+		$scope.setCsrfToken();
+		
 		$http.put('/binsinStore/api/cart/add/' + productId).then(
 				function successCallback() {
 					alert("Product successfully added to the acrt");
@@ -37,6 +43,9 @@ cartApp.controller("cartCtrl", function($scope, $http) {
 	};
 	
 	$scope.removeFromCart = function(productId) {
+		
+		$scope.setCsrfToken();
+		
 		$http({
 			method : 'DELETE',
 			url : '/binsinStore/api/cart/cartitem/' + productId
