@@ -59,8 +59,13 @@ cartApp.controller("cartCtrl", function($scope, $http) {
 	$scope.calGrandTotal = function() {
 		var grandTotal = 0;
 		
-		for(var i=0; i<$scope.cart.cartItems.length; i++) {
-			grandTotal += $scope.cart.cartItems[i].totalPrice;
+		if(typeof $scope.cart != "undefined") {
+			for(var i=0; i<$scope.cart.cartItems.length; i++) {
+				grandTotal += $scope.cart.cartItems[i].totalPrice;
+			}
+		}
+		else {
+			console.log("Cart is empty");
 		}
 		
 		return grandTotal;
@@ -72,5 +77,5 @@ cartApp.controller("cartCtrl", function($scope, $http) {
 		
 		$http.defaults.headers.common[csrfHeader] = csrfToken;
 	}
-	
+
 });
