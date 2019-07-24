@@ -1,0 +1,58 @@
+2019-07-24 19:58:22,722 INFO [main] c.b.HelloSpringBootApplication [StartupInfoLogger.java:55] Starting HelloSpringBootApplication on DESKTOP-TUOMKQO with PID 12156 (C:\study\Spring\BinSinMall\helloSpringBoot\target\classes started by yongm in C:\study\Spring\BinSinMall\helloSpringBoot)
+2019-07-24 19:58:22,736 DEBUG [main] c.b.HelloSpringBootApplication [StartupInfoLogger.java:56] Running with Spring Boot v2.2.0.BUILD-SNAPSHOT, Spring v5.2.0.BUILD-SNAPSHOT
+2019-07-24 19:58:22,752 INFO [main] c.b.HelloSpringBootApplication [SpringApplication.java:650] No active profile set, falling back to default profiles: default
+2019-07-24 19:58:23,836 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9000 (http)
+2019-07-24 19:58:23,852 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9000"]
+2019-07-24 19:58:23,852 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2019-07-24 19:58:23,852 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-24 19:58:23,942 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2019-07-24 19:58:23,942 INFO [main] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1125 ms
+2019-07-24 19:58:24,153 INFO [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [UserDetailsServiceAutoConfiguration.java:83] 
+
+Using generated security password: 7af89632-1939-4bed-811e-9025929433da
+
+2019-07-24 19:58:24,246 INFO [main] o.s.s.w.DefaultSecurityFilterChain [DefaultSecurityFilterChain.java:43] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e2c95ee, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d035be3, org.springframework.security.web.header.HeaderWriterFilter@3bd55d8, org.springframework.security.web.authentication.logout.LogoutFilter@73aff8f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4cfbaf4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3249a1ce, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d0ec63, org.springframework.security.web.session.SessionManagementFilter@6b04acb2, org.springframework.security.web.access.ExceptionTranslationFilter@5ffc5491, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@78c7f9b3]
+2019-07-24 19:58:24,367 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:171] Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-24 19:58:24,532 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2019-07-24 19:58:24,597 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-9000"]
+2019-07-24 19:58:24,612 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Pausing ProtocolHandler ["http-nio-9000"]
+2019-07-24 19:58:24,612 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2019-07-24 19:58:24,622 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Stopping ProtocolHandler ["http-nio-9000"]
+2019-07-24 19:58:24,622 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Destroying ProtocolHandler ["http-nio-9000"]
+2019-07-24 19:58:24,622 INFO [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-24 19:58:24,632 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter [LoggingFailureAnalysisReporter.java:40] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9000 or configure this application to listen on another port.
+
+2019-07-24 19:58:24,632 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:208] Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-24 19:58:45,392 INFO [main] c.b.HelloSpringBootApplication [StartupInfoLogger.java:55] Starting HelloSpringBootApplication on DESKTOP-TUOMKQO with PID 11868 (C:\study\Spring\BinSinMall\helloSpringBoot\target\classes started by yongm in C:\study\Spring\BinSinMall\helloSpringBoot)
+2019-07-24 19:58:45,402 DEBUG [main] c.b.HelloSpringBootApplication [StartupInfoLogger.java:56] Running with Spring Boot v2.2.0.BUILD-SNAPSHOT, Spring v5.2.0.BUILD-SNAPSHOT
+2019-07-24 19:58:45,402 INFO [main] c.b.HelloSpringBootApplication [SpringApplication.java:650] No active profile set, falling back to default profiles: default
+2019-07-24 19:58:46,543 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9000 (http)
+2019-07-24 19:58:46,552 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9000"]
+2019-07-24 19:58:46,552 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2019-07-24 19:58:46,552 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-24 19:58:46,663 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2019-07-24 19:58:46,663 INFO [main] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1188 ms
+2019-07-24 19:58:46,856 INFO [main] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [UserDetailsServiceAutoConfiguration.java:83] 
+
+Using generated security password: c00d3d96-a241-47ff-b9e7-797e6d20d2e8
+
+2019-07-24 19:58:46,932 INFO [main] o.s.s.w.DefaultSecurityFilterChain [DefaultSecurityFilterChain.java:43] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4351171a, org.springframework.security.web.context.SecurityContextPersistenceFilter@ba1f559, org.springframework.security.web.header.HeaderWriterFilter@3cc20577, org.springframework.security.web.authentication.logout.LogoutFilter@1d035be3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@46baf579, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c443976, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c2772d1, org.springframework.security.web.session.SessionManagementFilter@30e92cb9, org.springframework.security.web.access.ExceptionTranslationFilter@3e521715, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@45673f68]
+2019-07-24 19:58:47,052 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:171] Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-24 19:58:47,192 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2019-07-24 19:58:47,273 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-9000"]
+2019-07-24 19:58:47,292 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 9000 (http) with context path ''
+2019-07-24 19:58:47,302 INFO [main] c.b.HelloSpringBootApplication [StartupInfoLogger.java:61] Started HelloSpringBootApplication in 2.296 seconds (JVM running for 3.364)
