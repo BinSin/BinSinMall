@@ -1,4 +1,4 @@
-package com.binsin.controller;
+package com.binsin.cse.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
 	static Logger logger = LoggerFactory.getLogger(HomeController.class);
-
+	
 	// @RequestMapping(value="/", method = RequestMethod.GET).
 	@GetMapping("/")
 	public String home(Model model) {
 
-		logger.debug("Calling home( )");
-
+		logger.debug("Calling home( )" );
+		
 		model.addAttribute("message", "hello world");
 		return "index";
 

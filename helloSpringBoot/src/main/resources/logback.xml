@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
 	<appender name="STDOUT" 	class="ch.qos.logback.core.ConsoleAppender">
@@ -20,7 +21,7 @@
 		<appender-ref ref="FILE" />
 	</root>
 	
-	<logger name="com.binsin" level="DEBUG" >
+	<logger name="kr.ac.hansung.cse" level="DEBUG" >
 	</logger>
 	
 </configuration>
