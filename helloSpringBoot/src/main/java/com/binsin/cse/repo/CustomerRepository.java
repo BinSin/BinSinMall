@@ -8,6 +8,8 @@ import com.binsin.cse.model.Customer;
 
 public interface CustomerRepository extends CrudRepository<Customer, Long>{
 	
+	Customer findById(Long id);
+	
 	List<Customer> findByLastName(String lastName);
 
 }
